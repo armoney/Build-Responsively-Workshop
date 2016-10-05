@@ -5,30 +5,69 @@
     
     <style type="text/css">
       body {
-        width: 300px;               /* set the width */
+        width: 90%;               /* set the width */
         margin: 0 auto;             /* center the content */
       }
 
       .span-1, .span-2, .span-3 {
         min-height: 100px;
         float: left;
-        margin-right: 10px;         /* all spans get margin-right */
+        margin-right: 3.33333%;         /* all spans get margin-right */
         margin-bottom: 10px;
       }
 
       .span-1 {
-        width: 90px;                /* one column, 90 + 10 = 100 */
+        width: 30%;                /* one column, 90 + 10 = 100 */
         background-color: red;      /* so we can see it... */
       }
 
+      .span-1-5 {
+        width: 46.66666%;
+        min-height: 100px;
+        float: left;
+        margin-right: 3.33333%;
+        margin-bottom: 10px;
+
+      }
+
       .span-2 {
-        width: 190px;               /* two column, 190 + 10 = 200 */
+        width: 63.33333%;               /* two column, 190 + 10 = 200 */
         background-color: blue;
       }
       
       .span-3 {
-        width: 290px;               /* three column, 290 + 10 = 300 */
+        width: 96.66666%;               /* three column, 290 + 10 = 300 */
         background-color: lightgreen;
+      }
+
+      img {
+        border: 1px solid black;
+        max-width: 100%;
+        /*width: 46.11%;*/
+        /*margin-bottom: 10px;*/
+        height: 200px;
+        display: block;
+        margin: auto;
+        }
+
+      @media only screen and (max-width:480px){
+        
+        body {
+          width: 90%; 
+        }
+
+        img {
+          border: 1px solid black;
+          width: 96.33333%;
+          float: left;
+          margin-right: 3.33333%;
+          margin-bottom: 10px;
+          height: 200px;
+        }
+
+        .dog {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -56,6 +95,19 @@
 
     <div class="span-1">
       <p>Spanning one column.</p>
+    </div>
+
+
+    <div class="span-1-5">
+      <div class="img dino">
+        <img src="http://i.ebayimg.com/00/s/MjU3WDMwMA==/z/AH0AAOSwEK9UA8uy/$_35.JPG?set_id=2">
+      </div>
+    </div>
+
+    <div class="span-1-5">
+      <div class="img dog">
+        <img src="http://gpfkw.danipadev.com/images/dog_img.png">
+      </div>
     </div>
 
   </body>
